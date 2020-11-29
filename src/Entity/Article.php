@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
+use App\Entity\User;
 use App\Repository\ArticleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
@@ -56,8 +59,9 @@ class Article
      */
     public function __construct()
     {
-        $this->created_at = new DateType();
-        $this->update_at = new DateType();
+        $this->author =
+        $this->created_at = new \DateTime('@'.strtotime('now'));
+        $this->update_at = new \DateTime('@'.strtotime('now'));
         $this->comments = new ArrayCollection();
     }
 

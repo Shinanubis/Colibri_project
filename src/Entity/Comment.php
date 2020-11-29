@@ -44,6 +44,16 @@ class Comment
      */
     private $update_at;
 
+    /**
+     * Comment constructor.
+     */
+    public function __construct()
+    {
+        $this->created_at = new \DateTime('@'.strtotime('now'));
+        $this->update_at = new \DateTime('@'.strtotime('now'));
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;

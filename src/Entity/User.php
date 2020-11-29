@@ -79,10 +79,6 @@ class User implements UserInterface
         $this->comments = new ArrayCollection();
     }
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     /**
      * A visual identifier that represents this user.
@@ -104,12 +100,20 @@ class User implements UserInterface
     /**
      * @see UserInterface
      */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @see UserInterface
+     */
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
+        if (empty($roles)){
+            $roles[]='ROLE_USER';
+        }
         return array_unique($roles);
     }
 
