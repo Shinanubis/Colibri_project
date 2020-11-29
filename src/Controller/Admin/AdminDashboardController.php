@@ -5,6 +5,9 @@ namespace App\Controller\Admin;
 use App\Entity\User;
 use App\Entity\Article;
 use App\Entity\Comment;
+use App\Repository\ArticleRepository;
+use App\Repository\CommentRepository;
+use App\Repository\UserRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Router\CrudUrlGenerator;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -19,7 +22,11 @@ class AdminDashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        return parent::index();
+        return $this->render('backoffice/dashboard/dashboard.html.twig', [
+            'countArticles' => $this->getDoctrine()->getRepository(Article::class)->countArticles(),
+            'countComments' => $this->getDoctrine()->getRepository(Comment::class)->countComments(),
+            'countUsers' => $this->getDoctrine()->getRepository(User::class)->countUsers()
+        ]);
     }
 
     public function configureDashboard(): Dashboard

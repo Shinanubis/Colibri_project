@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4195d95-879b-49ca-be37-7a724462eef8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Colibri_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Colibri_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminDashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CommentCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/CommentCrudController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CommentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CommentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,10 +146,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/fixtures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/scss" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/scss" />
+      <recent name="$PROJECT_DIR$/templates/backoffice" />
       <recent name="$PROJECT_DIR$/fixtures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

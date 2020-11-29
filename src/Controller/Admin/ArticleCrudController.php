@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Article;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class ArticleCrudController extends AbstractCrudController
@@ -20,7 +21,7 @@ class ArticleCrudController extends AbstractCrudController
         return [
             AssociationField::new('author')->setValue('Admin'),
             TextField::new('title'),
-            TextField::new('content')
+            TextareaField::new('content')
         ];
 
     }
