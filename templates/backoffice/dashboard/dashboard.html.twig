@@ -1,36 +1,22 @@
 {% extends '@EasyAdmin/page/content.html.twig' %}
-{% block page_title 'Welcome to EasyAdmin 3' %}
+{% block page_title 'Welcome to Admin dashboard' %}
 
 {% block page_content %}
     <div class="section mt-30">
         <div class="columns">
             <div class="column has-text-centered">
-                <div class="box stats-card has-background-info">
-                    <i class="fa fa-file-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
-                    <span class="has-text-weight-bold is-size-3 has-text-light">
-                        {{ countArticles }} article
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column has-text-centered">
-                <div class="box stats-card has-background-info">
-                    <i class="fa fa-file-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
-                    <span class="has-text-weight-bold is-size-3 has-text-light">
-                        {{ countComments }} comment
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column has-text-centered">
-                <div class="box stats-card has-background-info">
-                    <i class="fa fa-file-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
-                    <span class="has-text-weight-bold is-size-3 has-text-light">
-                        {{ countUsers }} user
-                    </span>
-                </div>
+                <i class="fa fa-comment-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
+                <span class="has-text-weight-bold is-size-3 has-text-light">
+                    {{ countComments }}
+                </span>
+                <i class="fa fa-newspaper-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
+                <span class="has-text-weight-bold is-size-3 has-text-light">
+                    {{ countArticles }} {% if countArticles == 1 %}article{% else %}articles{% endif %}
+                </span>
+                <i class="fa fa-user-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
+                <span class="has-text-weight-bold is-size-3 has-text-light">
+                    {{ countUsers }} {% if countUsers == 1 %}user{% else %}users{% endif %}
+                </span>
             </div>
         </div>
     </div>
