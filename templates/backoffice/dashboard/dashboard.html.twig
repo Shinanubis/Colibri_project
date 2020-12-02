@@ -7,15 +7,15 @@
             <div class="column has-text-centered">
                 <i class="fa fa-comment-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
                 <span class="has-text-weight-bold is-size-3 has-text-light">
-                    {{ countComments }}
+                    {{ countComments }} {{ countComments <= 1 ? 'comment' : 'comments' }}
                 </span>
                 <i class="fa fa-newspaper-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
                 <span class="has-text-weight-bold is-size-3 has-text-light">
-                    {{ countArticles }} {% if countArticles == 1 %}article{% else %}articles{% endif %}
+                    {{ countArticles }} {{ countArticles <= 1 ? 'article' : 'articles' }}
                 </span>
                 <i class="fa fa-user-o fa-8x is-block mb-5 has-text-light" aria-hidden="true"></i>
                 <span class="has-text-weight-bold is-size-3 has-text-light">
-                    {{ countUsers }} {% if countUsers == 1 %}user{% else %}users{% endif %}
+                    {{ countUsers }} {{ countUsers <= 1 ? 'user' : 'users' }}
                 </span>
             </div>
         </div>

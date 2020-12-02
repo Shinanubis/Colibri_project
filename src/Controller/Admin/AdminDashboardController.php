@@ -31,8 +31,7 @@ class AdminDashboardController extends AbstractDashboardController
 
     public function configureDashboard(): Dashboard
     {
-        return Dashboard::new()
-            ->setTitle('Colibri Project');
+        return Dashboard::new()->setTitle('Colibri Project');
     }
 
     public function configureMenuItems(): iterable
