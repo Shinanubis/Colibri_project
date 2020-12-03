@@ -1,0 +1,20 @@
+{{ form_start(form, {'action': path('comment_new', {'slug': article.slug}), 'attr': {'id': 'comment-form'} }) }}
+{{ form_errors(form) }}
+<article class="media">
+    <div class="media-content">
+
+        <div class="field">
+            {{ form_label(form.content, 'comment here', {'label_attr': {'class': 'label'}}) }}
+            <p class="control">
+                {{ form_widget(form.content, {'attr': {'class': 'textarea', 'placeholder': 'write comment '}}) }}
+            </p>
+        </div>
+        <div class="field">
+            <p class="control">
+                {{ form_rest(form) }}
+                <button type="submit" class="button is-primary">Post</button>
+            </p>
+        </div>
+    </div>
+</article>
+{{ form_end(form) }}
