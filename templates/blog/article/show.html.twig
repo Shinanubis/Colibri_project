@@ -41,10 +41,9 @@
                 {{ render(controller('App\\Controller\\BlogController::commentForm', {'article': article.id})) }}
             {% else %}
                 <div class="notification is-primary">
-                    {{ 'article.not_authenticate'|trans }} <br>
-                    <a href="{{ path('login') }}">{{ 'article.login'|trans }}</a>
-                    {{ 'generic.or'|trans }}
-                    <a href="{{ path('registration') }}">{{ 'article.signin'|trans }}</a>
+                    {{ 'please login or register' }} <br>
+                    <a href="{{ path('login') }}">{{ 'login / ' }}</a>
+                    <a href="{{ path('registration') }}">{{ ' sign up' }}</a>
                 </div>
             {% endif %}
         </div>
