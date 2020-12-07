@@ -37,13 +37,21 @@
 
     <div class="columns">
         <div class="column">
-            {% if is_granted('ROLE_USER') or is_granted('ROLE_ADMIN') %}
+            {% if app.user %}
                 {{ render(controller('App\\Controller\\BlogController::commentForm', {'article': article.id})) }}
             {% else %}
                 <div class="notification is-primary">
                     {{ 'please login or register' }} <br>
-                    <a href="{{ path('login') }}">{{ 'login / ' }}</a>
-                    <a href="{{ path('registration') }}">{{ ' sign up' }}</a>
+                    <a href="{{ path('login') }}">
+                        <i class="fa fa-sign-in">
+                            Sign In
+                        </i>
+                    </a>
+                    <a href="{{ path('registration') }}">
+                        <i class="fa fa-user-plus">
+                            Sign Up
+                        </i>
+                    </a>
                 </div>
             {% endif %}
         </div>
