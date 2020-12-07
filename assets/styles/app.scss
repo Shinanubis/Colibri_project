@@ -1,16 +1,26 @@
 @import "~bootstrap";
 @import "~font-awesome";
 
+body{
+  background-image: url("../images/foodpaper.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+//article show page
 .article-infos li{
   list-style: none;
 }
 
-#login{
+//login page
+#login_form{
   width: 100%;
   max-width: 330px;
   padding: 15px;
+  padding-top: 15%;
   margin: 0 auto;
   text-align: center;
+  color: #fff;
 
   #login_rememberMe{
         margin-top: 1rem !important;
@@ -24,12 +34,15 @@
       }
 
 }
+//registration page
 #register{
   width: 100%;
   max-width: 330px;
   padding: 15px;
+  padding-top: 15%;
   margin: 0 auto;
   text-align: center;
+  color: #fff;
   i{
     font-size: 72px;
     color: #0f6ab4;
@@ -41,5 +54,43 @@
   #registration_form_agreeTerms{
     width: 0%;
     margin-left: 2%;
+  }
+}
+
+//login & register
+.form_page{
+  padding: 5%;
+}
+
+.gradient-border {
+  --borderWidth: 10px;
+  //background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #314763, #1E2432, #2C3140, #4C5F77, #2B3952);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 5s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

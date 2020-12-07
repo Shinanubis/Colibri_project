@@ -8,13 +8,15 @@
     {% endfor %}
 
     {{ form_start(registrationForm, {'attr': {'id': 'register', 'class': 'col-md-4 col-md-offset-4'} }) }}
-        <i class="fa fa-user-plus"></i>
-        <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.username) }}
-        {{ form_row(registrationForm.plainPassword) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+        <div class="gradient-border form_page">
+            <i class="fa fa-user-plus"></i>
+            <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+            {{ form_row(registrationForm.email) }}
+            {{ form_row(registrationForm.username) }}
+            {{ form_row(registrationForm.plainPassword) }}
+            {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
+            <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
+        </div>
     {{ form_end(registrationForm) }}
 {% endblock %}
