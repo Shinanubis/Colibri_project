@@ -1,6 +1,7 @@
 @import "~bootstrap";
 @import "~font-awesome";
 
+html { overflow-y: hidden; }
 body{
   background-image: url("../images/foodpaper.jpg");
   background-size: 100%;
@@ -101,6 +102,8 @@ body{
 }
 
 #article_show{
+  overflow-y: auto;
+  height: 800px;
   background-color: lightgrey;
   max-width: 50%;
   margin: 2% auto;
@@ -136,6 +139,9 @@ body{
     }
     #comment-form{
       margin-left: -2%;
+    }
+    .notification{
+      padding: 2%;
     }
 }
 @font-face {

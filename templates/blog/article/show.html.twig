@@ -43,7 +43,7 @@
                     {{ render(controller('App\\Controller\\BlogController::commentForm', {'article': article.id})) }}
                 {% else %}
                     <div class="notification is-primary">
-                        {{ 'please login or register' }} <br>
+                        You must be login to leave a comment  <br>
                         <a href="{{ path('login') }}">
                             <i class="fa fa-sign-in">
                                 Sign In
