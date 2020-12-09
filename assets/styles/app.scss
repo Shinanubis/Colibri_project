@@ -1,0 +1,171 @@
+@import "~bootstrap";
+@import "~font-awesome";
+
+html { overflow-y: hidden; }
+body{
+  background-image: url("../images/foodpaper.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+//article show page
+.article-infos li{
+  list-style: none;
+}
+
+//login page
+#login_form{
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  padding-top: 15%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+
+  #login_rememberMe{
+        margin-top: 1rem !important;
+      }
+      i{
+        font-size: 72px;
+        color: #0f6ab4;
+      }
+      input{
+        margin-bottom: 5%;
+      }
+
+}
+//registration page
+#register{
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  padding-top: 15%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  i{
+    font-size: 72px;
+    color: #0f6ab4;
+  }
+  input{
+    margin-bottom: 5%;
+    width: 100%;
+  }
+  #registration_form_agreeTerms{
+    width: 0%;
+    margin-left: 2%;
+  }
+}
+
+//login & register
+.form_page{
+  padding: 5%;
+}
+
+.gradient-border {
+  --borderWidth: 10px;
+  //background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #314763, #1E2432, #2C3140, #4C5F77, #2B3952);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 5s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card{
+  max-width: 50%;
+  margin: 1% auto;
+}
+
+#article_show{
+  overflow-y: auto;
+  height: 800px;
+  background-color: lightgrey;
+  max-width: 50%;
+  margin: 2% auto;
+  padding: 2%;
+    p{
+      margin-top: 10%;
+    }
+    ul{
+      padding: 0;
+    }
+    li{
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .title.is-1{
+      margin-bottom: -1%;
+      padding: 0;
+      font-family: "NerkoOne";
+      font-size: 3.5rem;
+    }
+    a{
+      margin-right: 1%;
+    }
+    .subtitle.is-6{
+      font-size: 1rem;
+    }
+    #comment_date{
+      font-size: 0.7rem;
+      margin-top: -40%;
+    }
+    article.media{
+      margin-left: 2%;
+    }
+    #comment-form{
+      margin-left: -2%;
+    }
+    .notification{
+      padding: 2%;
+    }
+}
+
+#profile{
+  background-color: lightgrey;
+  max-width: 50%;
+  margin: 2% auto;
+  padding: 2%;
+  ul{
+    list-style: none;
+  }
+}
+@font-face {
+  font-family: "NerkoOne";
+  src: url("../fonts/NerkoOne-Regular.ttf");
+}
+
+
+#edit_form,{
+  background-color: lightgrey;
+  max-width: 50%;
+  margin: 2% auto;
+  padding: 2%;
+  ul{
+    list-style: none;
+  }
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.4.xsd" frameworkId="com.symfony" name="Symfony_28/11/2020 17:23" invoke="af2d4fc3-7659-4d83-a39a-1905acb36207 /var/www/html/Colibri_project/bin/console" alias="symfony" enabled="true" version="2">
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.4.xsd" frameworkId="com.symfony" name="Symfony_30/11/2020 16:32" invoke="af2d4fc3-7659-4d83-a39a-1905acb36207 /var/www/html/Colibri_project/bin/console" alias="symfony" enabled="true" version="2">
   <extraData><![CDATA[version:3]]></extraData>
   <command>
     <name>about</name>
@@ -309,6 +309,58 @@
     <optionsBefore>
       <option name="--no-optional-warmers" shortcut="">
         <help><![CDATA[Skip optional cache warmers (faster)]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>ckeditor:install</name>
+    <help><![CDATA[The <b>ckeditor:install</b> command install CKEditor in your application:<br> <br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install</b><br> <br> You can install it at a specific path (absolute):<br> <br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install path</b><br> <br> You can install a specific release (basic, standard or full):<br> <br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install --release=full</b><br> <br> You can install a specific version:<br> <br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install --tag=4.7.0</b><br> <br> You can install custom build generated on https://ckeditor.com/cke4/builder:<br> <br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install --release=custom --custom-build-id=574a82a0d3e9226d94b0e91d10eaa372</b><br> <br> If there is a previous CKEditor installation detected, <br> you can control how it should be handled in non-interactive mode:<br> <br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install --clear=drop</b><br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install --clear=keep</b><br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install --clear=skip</b><br> <br> You can exclude path(s) when extracting CKEditor:<br> <br> <b>php /var/www/html/Colibri_project/bin/console ckeditor:install --exclude=samples --exclude=adapters</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--release</td><td></td><td>CKEditor release (basic, standard, full or custom)</td></tr> <tr><td>--custom-build-id</td><td></td><td>CKEditor custom build ID</td></tr> <tr><td>--tag</td><td></td><td>CKEditor tag (x.y.z or latest)</td></tr> <tr><td>--clear</td><td></td><td>How to clear previous CKEditor installation (drop, keep or skip)</td></tr> <tr><td>--exclude</td><td></td><td>Path to exclude when extracting CKEditor</td></tr> <tr><td>--no-progress-bar</td><td>(-nobar)</td><td>Hide the progress bars?</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>path[=null]</params>
+    <optionsBefore>
+      <option name="--release" shortcut="" pattern="equals">
+        <help><![CDATA[CKEditor release (basic, standard, full or custom)]]></help>
+      </option>
+      <option name="--custom-build-id" shortcut="" pattern="equals">
+        <help><![CDATA[CKEditor custom build ID]]></help>
+      </option>
+      <option name="--tag" shortcut="" pattern="equals">
+        <help><![CDATA[CKEditor tag (x.y.z or latest)]]></help>
+      </option>
+      <option name="--clear" shortcut="" pattern="equals">
+        <help><![CDATA[How to clear previous CKEditor installation (drop, keep or skip)]]></help>
+      </option>
+      <option name="--exclude" shortcut="" pattern="equals">
+        <help><![CDATA[Path to exclude when extracting CKEditor]]></help>
+      </option>
+      <option name="--no-progress-bar" shortcut="-nobar">
+        <help><![CDATA[Hide the progress bars?]]></help>
       </option>
       <option name="--help" shortcut="-h">
         <help><![CDATA[Display this help message]]></help>
@@ -1148,6 +1200,60 @@
       </option>
       <option name="--em" shortcut="" pattern="equals">
         <help><![CDATA[The entity manager to use for this command]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>doctrine:fixtures:load</name>
+    <help><![CDATA[The <b>doctrine:fixtures:load</b> command loads data fixtures from your application:<br> <br> <b>php /var/www/html/Colibri_project/bin/console doctrine:fixtures:load</b><br> <br> Fixtures are services that are tagged with <comment>doctrine.fixture.orm</comment>.<br> <br> If you want to append the fixtures instead of flushing the database first you can use the <comment>--append</comment> option:<br> <br> <b>php /var/www/html/Colibri_project/bin/console doctrine:fixtures:load</b> <comment>--append</comment><br> <br> By default Doctrine Data Fixtures uses DELETE statements to drop the existing rows from the database.<br> If you want to use a TRUNCATE statement instead you can use the <comment>--purge-with-truncate</comment> flag:<br> <br> <b>php /var/www/html/Colibri_project/bin/console doctrine:fixtures:load</b> <comment>--purge-with-truncate</comment><br> <br> To execute only fixtures that live in a certain group, use:<br> <br> <b>php /var/www/html/Colibri_project/bin/console doctrine:fixtures:load</b> <comment>--group=group1</comment><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--append</td><td></td><td>Append the data fixtures instead of deleting all data from the database first.</td></tr> <tr><td>--group</td><td></td><td>Only load fixtures that belong to this group</td></tr> <tr><td>--em</td><td></td><td>The entity manager to use for this command.</td></tr> <tr><td>--purger</td><td></td><td>The purger to use for this command</td></tr> <tr><td>--purge-exclusions</td><td></td><td>List of database tables to ignore while purging</td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command.</td></tr> <tr><td>--purge-with-truncate</td><td></td><td>Purge data by using a database-level TRUNCATE statement</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <optionsBefore>
+      <option name="--append" shortcut="">
+        <help><![CDATA[Append the data fixtures instead of deleting all data from the database first.]]></help>
+      </option>
+      <option name="--group" shortcut="" pattern="equals">
+        <help><![CDATA[Only load fixtures that belong to this group]]></help>
+      </option>
+      <option name="--em" shortcut="" pattern="equals">
+        <help><![CDATA[The entity manager to use for this command.]]></help>
+      </option>
+      <option name="--purger" shortcut="" pattern="equals">
+        <help><![CDATA[The purger to use for this command]]></help>
+      </option>
+      <option name="--purge-exclusions" shortcut="" pattern="equals">
+        <help><![CDATA[List of database tables to ignore while purging]]></help>
+      </option>
+      <option name="--shard" shortcut="" pattern="equals">
+        <help><![CDATA[The shard connection to use for this command.]]></help>
+      </option>
+      <option name="--purge-with-truncate" shortcut="">
+        <help><![CDATA[Purge data by using a database-level TRUNCATE statement]]></help>
       </option>
       <option name="--help" shortcut="-h">
         <help><![CDATA[Display this help message]]></help>
@@ -2329,6 +2435,106 @@
     </optionsBefore>
   </command>
   <command>
+    <name>make:admin:crud</name>
+    <help><![CDATA[<table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:admin:dashboard</name>
+    <help><![CDATA[<table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>make:admin:migration</name>
+    <help><![CDATA[<table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>ea2-backup-file[=null]</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
     <name>make:auth</name>
     <help><![CDATA[The <b>make:auth</b> command generates various authentication systems,<br> by asking questions.<br> <br> It can provide an empty authenticator, or a full login form authentication process.<br> In both cases it also updates your <b>security.yaml</b>.<br> For the login form, it also generates a controller and the twig template.<br> <br> <b>php /var/www/html/Colibri_project/bin/console make:auth</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <optionsBefore>
@@ -3479,7 +3685,7 @@
   </command>
   <command>
     <name>translation:update</name>
-    <help><![CDATA[The <b>translation:update</b> command extracts translation strings from templates<br> of a given bundle or the default translations directory. It can display them or merge<br> the new ones into the translation files.<br> <br> When new translation strings are found it can automatically add a prefix to the translation<br> message.<br> <br> Example running against a Bundle (AcmeBundle)<br> <br> <b>php /var/www/html/Colibri_project/bin/console translation:update --dump-messages en AcmeBundle</b><br> <b>php /var/www/html/Colibri_project/bin/console translation:update --force --prefix="new_" fr AcmeBundle</b><br> <br> Example running against default messages directory<br> <br> <b>php /var/www/html/Colibri_project/bin/console translation:update --dump-messages en</b><br> <b>php /var/www/html/Colibri_project/bin/console translation:update --force --prefix="new_" fr</b><br> <br> You can sort the output with the <comment>--sort</> flag:<br> <br> <b>php /var/www/html/Colibri_project/bin/console translation:update --dump-messages --sort=asc en AcmeBundle</b><br> <b>php /var/www/html/Colibri_project/bin/console translation:update --dump-messages --sort=desc fr</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--prefix</td><td></td><td>Override the default prefix</td></tr> <tr><td>--output-format</td><td></td><td>Override the default output format</td></tr> <tr><td>--dump-messages</td><td></td><td>Should the messages be dumped in the console</td></tr> <tr><td>--force</td><td></td><td>Should the update be done</td></tr> <tr><td>--no-backup</td><td></td><td>Should backup be disabled</td></tr> <tr><td>--clean</td><td></td><td>Should clean not found messages</td></tr> <tr><td>--domain</td><td></td><td>Specify the domain to update</td></tr> <tr><td>--xliff-version</td><td></td><td>Override the default xliff version</td></tr> <tr><td>--sort</td><td></td><td>Return list of messages sorted alphabetically</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <help><![CDATA[The <b>translation:update</b> command extracts translation strings from templates<br> of a given bundle or the default translations directory. It can display them or merge<br> the new ones into the translation files.<br> <br> When new translation strings are found it can automatically add a prefix to the translation<br> message.<br> <br> Example running against a Bundle (AcmeBundle)<br> <br> <b>php /var/www/html/Colibri_project/bin/console translation:update --dump-messages en AcmeBundle</b><br> <b>php /var/www/html/Colibri_project/bin/console translation:update --force --prefix="new_" fr AcmeBundle</b><br> <br> Example running against default messages directory<br> <br> <b>php /var/www/html/Colibri_project/bin/console translation:update --dump-messages en</b><br> <b>php /var/www/html/Colibri_project/bin/console translation:update --force --prefix="new_" fr</b><br> <br> You can sort the output with the <comment>--sort</> flag:<br> <br> <b>php /var/www/html/Colibri_project/bin/console translation:update --dump-messages --sort=asc en AcmeBundle</b><br> <b>php /var/www/html/Colibri_project/bin/console translation:update --dump-messages --sort=desc fr</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--prefix</td><td></td><td>Override the default prefix</td></tr> <tr><td>--output-format</td><td></td><td>Override the default output format</td></tr> <tr><td>--dump-messages</td><td></td><td>Should the messages be dumped in the console</td></tr> <tr><td>--force</td><td></td><td>Should the update be done</td></tr> <tr><td>--clean</td><td></td><td>Should clean not found messages</td></tr> <tr><td>--domain</td><td></td><td>Specify the domain to update</td></tr> <tr><td>--xliff-version</td><td></td><td>Override the default xliff version</td></tr> <tr><td>--sort</td><td></td><td>Return list of messages sorted alphabetically</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <params>locale bundle[=null]</params>
     <optionsBefore>
       <option name="--prefix" shortcut="" pattern="equals">
@@ -3493,9 +3699,6 @@
       </option>
       <option name="--force" shortcut="">
         <help><![CDATA[Should the update be done]]></help>
-      </option>
-      <option name="--no-backup" shortcut="">
-        <help><![CDATA[Should backup be disabled]]></help>
       </option>
       <option name="--clean" shortcut="">
         <help><![CDATA[Should clean not found messages]]></help>
