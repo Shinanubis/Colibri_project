@@ -144,7 +144,28 @@ body{
       padding: 2%;
     }
 }
+
+#profile{
+  background-color: lightgrey;
+  max-width: 50%;
+  margin: 2% auto;
+  padding: 2%;
+  ul{
+    list-style: none;
+  }
+}
 @font-face {
   font-family: "NerkoOne";
   src: url("../fonts/NerkoOne-Regular.ttf");
+}
+
+
+#edit_form,{
+  background-color: lightgrey;
+  max-width: 50%;
+  margin: 2% auto;
+  padding: 2%;
+  ul{
+    list-style: none;
+  }
 }

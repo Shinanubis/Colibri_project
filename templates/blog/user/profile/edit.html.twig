@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+    <div id="edit_form">
+        <div class="column is-one-quarter">
+            {% include('blog/user/profile/_sidebar.html.twig') %}
+        </div>
+        <h1>Edit User</h1>
+
+        {{ include('blog/user/profile/_form.html.twig', {'button_label': 'Update'}) }}
+
+    </div>
+
+{% endblock %}
