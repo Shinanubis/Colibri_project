@@ -134,7 +134,7 @@ class User implements UserInterface
 
     public function setPassword(string $password): self
     {
-        $this->password = $password;
+        $this->password = password_hash($password, PASSWORD_ARGON2ID);
 
         return $this;
     }
