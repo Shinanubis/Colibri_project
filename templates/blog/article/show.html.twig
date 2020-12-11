@@ -2,6 +2,9 @@
 
 {% block body %}
     <div id="article_show">
+        {% if article.coveredImage is not null %}
+            <img src="/uploads/images/covered/{{ article.coveredImage }}" alt="{{ article.coveredImage }}" id="covered_image">
+        {% endif %}
         <h1 class="title is-1 has-text-grey-dark has-text-weight-bold">{{ article.title }}</h1>
         <h2 class="subtitle is-6">
             <ul class="article-infos">
