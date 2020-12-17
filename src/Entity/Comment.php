@@ -49,8 +49,8 @@ class Comment
      */
     public function __construct()
     {
-        $this->created_at = new \DateTime('@'.strtotime('now'));
-        $this->update_at = new \DateTime('@'.strtotime('now'));
+        $this->created_at = new \DateTime('now');
+        $this->update_at = new \DateTime('now');
     }
 
 

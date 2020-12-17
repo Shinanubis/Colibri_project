@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.1",
         "@symfony/stimulus-bridge": "^1.0.0",
         "@symfony/webpack-encore": "^0.32.0",
         "core-js": "^3.0.0",
