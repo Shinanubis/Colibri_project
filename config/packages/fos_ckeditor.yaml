@@ -5,3 +5,5 @@ fos_ck_editor:
     configs:
         base_config:
             toolbar: full
+            filebrowserBrowseRoute: elfinder
+            filebrowserBrowseRouteParameters: [ ]

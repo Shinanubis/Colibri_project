@@ -126,6 +126,19 @@
     "gedmo/doctrine-extensions": {
         "version": "v3.0.0"
     },
+    "helios-ag/fm-elfinder-bundle": {
+        "version": "10.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "10.0",
+            "ref": "addd79a9903ee92664f4cff61eb6cdd1b95945e7"
+        },
+        "files": [
+            "config/packages/fm_elfinder.yaml",
+            "config/routes/fm_elfinder.yaml"
+        ]
+    },
     "jms/metadata": {
         "version": "2.4.0"
     },
@@ -194,6 +207,9 @@
         "files": [
             "config/packages/stof_doctrine_extensions.yaml"
         ]
+    },
+    "studio-42/elfinder": {
+        "version": "2.1.57"
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.2.4"

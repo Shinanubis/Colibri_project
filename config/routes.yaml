@@ -16,3 +16,6 @@ user_profile:
 user_edit:
     path: /user/profile/edit
     controller: App\Controller\UserController::edit
+
+# elfinder:
+#    resource: "@FMElfinderBundle/Resources/config/routing.yaml"
