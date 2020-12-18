@@ -26,18 +26,12 @@
             </h3>
 
             {% for comment in article.comments|sort|reverse %}
-                <article class="">
-                    <div class="">
-                        <div class="content" id="comment">
-                            <p>
-                                <strong>{{ comment.author.username }}</strong>
-                                <div id="comment_date">{{ comment.createdAt|date("d/m/Y") }}</div>
-                                <br>
-                                {{ comment.content }}
-                            </p>
-                        </div>
-                    </div>
-                </article>
+                <div class="content" id="comment">
+                    <div id="comment_author">{{ "by " ~ comment.author.username }}</div>
+                    <div id="comment_date">{{ "at " ~ comment.createdAt|date("d/m/Y") }}</div>
+                    <div id="comment_content">{{ comment.content }}</div>
+                </div>
+
                 <hr class="comments-separator">
             {% endfor %}
 

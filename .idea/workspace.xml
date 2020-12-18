@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18900693-3dd3-41e5-9ec1-1c079386699f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Colibri_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/homepaper.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/test.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/article.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/homepage.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/login.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/register.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/user_dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_13_12_2020_14_39.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_18_12_2020_17_09.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/article.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blog/article/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/article/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/layout-blog.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/user/profile/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/user/profile/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +199,7 @@
       <workItem from="1608134289802" duration="3347000" />
       <workItem from="1608198593927" duration="3738000" />
       <workItem from="1608290872402" duration="14635000" />
-      <workItem from="1608307792613" duration="342000" />
+      <workItem from="1608307792613" duration="1814000" />
     </task>
     <servers />
   </component>
