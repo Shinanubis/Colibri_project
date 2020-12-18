@@ -2,60 +2,65 @@
 
 {% block body %}
     <div id="article_show">
-        <h1 class="title is-1 has-text-grey-dark has-text-weight-bold">{{ article.title }}</h1>
-        <h2 class="subtitle is-6">
-            <ul class="article-infos">
-                <li><i class="fa fa-calendar" aria-hidden="true"></i> {{ article.createdAt|date("d/m/Y") }}</li>
-                <li><i class="fa fa-user" aria-hidden="true"></i> by: {{ article.author.username|capitalize }}</li>
-                <li><i class="fa fa-commenting" aria-hidden="true"></i> {{ article.comments.count }}
-                    {{ article.comments.count <= 1 ? 'comment' : 'comments' }}</li>
-            </ul>
-        </h2>
+        {% if article.coveredImage is not null %}
+            <img src="/uploads/images/covered/{{ article.coveredImage }}" alt="{{ article.coveredImage }}" id="covered_image">
+        {% endif %}
+        <div id="article_body">
+            <h1 class="title is-1 has-text-grey-dark has-text-weight-bold">{{ article.title }}</h1>
+            <h2 class="subtitle is-6">
+                <ul class="article-infos">
+                    <li><i class="fa fa-calendar" aria-hidden="true"></i> {{ article.createdAt|date("d/m/Y") }}</li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i> by: {{ article.author.username|capitalize }}</li>
+                    <li><i class="fa fa-commenting" aria-hidden="true"></i> {{ article.comments.count }}
+                        {{ article.comments.count <= 1 ? 'comment' : 'comments' }}</li>
+                </ul>
+            </h2>
 
-        <div class="article-content">
-            <p>{{ article.content }}</p>
-        </div>
+            <div class="article-content">
+                <p>{{ article.content }}</p>
+            </div>
 
-        <hr>
-        <h3 class="title is-4">
-            {{ article.comments|length }} {{ article.comments|length <= 1 ? 'comment' : 'comments' }}
-        </h3>
+            <hr>
+            <h3 class="title is-4">
+                {{ article.comments|length }} {{ article.comments|length <= 1 ? 'comment' : 'comments' }}
+            </h3>
 
-        {% for comment in article.comments|sort|reverse %}
-            <article class="media">
-                <div class="media-content">
-                    <div class="content" id="comment">
-                        <p>
-                            <strong>{{ comment.author.username }}</strong>
-                            <div id="comment_date">{{ comment.createdAt|date("d/m/Y") }}</div>
-                            <br>
-                            {{ comment.content }}
-                        </p>
+            {% for comment in article.comments|sort|reverse %}
+                <article class="">
+                    <div class="">
+                        <div class="content" id="comment">
+                            <p>
+                                <strong>{{ comment.author.username }}</strong>
+                                <div id="comment_date">{{ comment.createdAt|date("d/m/Y") }}</div>
+                                <br>
+                                {{ comment.content }}
+                            </p>
+                        </div>
                     </div>
+                </article>
+                <hr class="comments-separator">
+            {% endfor %}
+
+            <div class="columns">
+                <div class="column">
+                    {% if app.user %}
+                        {{ render(controller('App\\Controller\\BlogController::commentForm', {'article': article.id})) }}
+                    {% else %}
+                        <div class="notification is-primary">
+                            You must be login to leave a comment  <br>
+                            <a href="{{ path('login') }}">
+                                <i class="fa fa-sign-in">
+                                    Sign In
+                                </i>
+                            </a>
+                            <a href="{{ path('registration') }}">
+                                <i class="fa fa-user-plus">
+                                    Sign Up
+                                </i>
+                            </a>
+                        </div>
+                    {% endif %}
                 </div>
-            </article>
-            <hr class="comments-separator">
-        {% endfor %}
-
-        <div class="columns">
-            <div class="column">
-                {% if app.user %}
-                    {{ render(controller('App\\Controller\\BlogController::commentForm', {'article': article.id})) }}
-                {% else %}
-                    <div class="notification is-primary">
-                        You must be login to leave a comment  <br>
-                        <a href="{{ path('login') }}">
-                            <i class="fa fa-sign-in">
-                                Sign In
-                            </i>
-                        </a>
-                        <a href="{{ path('registration') }}">
-                            <i class="fa fa-user-plus">
-                                Sign Up
-                            </i>
-                        </a>
-                    </div>
-                {% endif %}
             </div>
         </div>
     </div>

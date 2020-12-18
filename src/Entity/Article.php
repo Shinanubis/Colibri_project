@@ -11,9 +11,12 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\Security;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
+ * @Vich\Uploadable
  */
 class Article
 {
@@ -62,14 +65,26 @@ class Article
      */
     private $slug;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
+     */
+    private $covered_image;
+
+    /**
+     * @Vich\UploadableField(mapping="covered_images", fileNameProperty="covered_image")
+     * @var File
+     */
+    private $imageFile;
+
 
     /**
      * Article constructor.
      */
     public function __construct()
     {
-        $this->created_at = new \DateTime('@'.strtotime('now'));
-        $this->update_at = new \DateTime('@'.strtotime('now'));
+        $this->created_at = new \DateTime('now');
+        $this->update_at = new \DateTime('now');
         $this->comments = new ArrayCollection();
     }
 
@@ -182,6 +197,32 @@ class Article
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+        if ($image) {
+            $this->updated_at = new \DateTime('now');
+        }
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function getCoveredImage(): ?string
+    {
+        return $this->covered_image;
+    }
+
+    public function setCoveredImage(?string $covered_image): self
+    {
+        $this->covered_image = $covered_image;
 
         return $this;
     }

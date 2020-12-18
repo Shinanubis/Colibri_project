@@ -42,3 +42,5 @@ security:
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/user, roles: IS_AUTHENTICATED_FULLY }
+        #- { path: ^/efconnect, role: ROLE_ADMIN }
+        #- { path: ^/elfinder, role: ROLE_ADMIN }

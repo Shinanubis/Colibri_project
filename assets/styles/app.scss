@@ -107,42 +107,56 @@ body{
   background-color: lightgrey;
   max-width: 50%;
   margin: 2% auto;
-  padding: 2%;
-    p{
+  #article_body {
+    padding: 2%;
+
+    p {
       margin-top: 10%;
     }
-    ul{
+
+    ul {
       padding: 0;
     }
-    li{
+
+    li {
       display: inline-block;
       margin-right: 10px;
     }
-    .title.is-1{
-      margin-bottom: -1%;
+
+    .title.is-1 {
+      margin-bottom: -0.2%;
       padding: 0;
       font-family: "NerkoOne";
       font-size: 3.5rem;
     }
-    a{
+
+    a {
       margin-right: 1%;
     }
-    .subtitle.is-6{
+
+    .subtitle.is-6 {
       font-size: 1rem;
     }
-    #comment_date{
+
+    #comment_date {
       font-size: 0.7rem;
-      margin-top: -40%;
     }
-    article.media{
+
+    article.media {
       margin-left: 2%;
     }
-    #comment-form{
+
+    #comment-form {
       margin-left: -2%;
     }
-    .notification{
+
+    .notification {
       padding: 2%;
     }
+  }
+  #covered_image{
+    max-width: 100%;
+  }
 }
 
 #profile{
