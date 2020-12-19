@@ -3,16 +3,81 @@
 {% block title %}User Profile{% endblock %}
 
 {% block body %}
-    <div class="columns" id="profile">
-        <div class="column is-one-quarter">
-            {% include('blog/user/profile/_sidebar.html.twig') %}
+<div class="container">
+    <div class="main-body">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <nav class="navbar navbar-expand-sm">
+                        <a href="{{ path('user_profile') }}">Profile</a>
+                        {{ "&nbsp / &nbsp" }}
+                        <a href="{{ path('user_edit') }}/{{ app.user.id }}">  Edit</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>{{ user.username }}</h4>
+                                <p class="text-secondary mb-1">{{ user.email }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h6 class="mb-0">firstname</h6>
+                            </div>
+                            <div class="col-sm-8 text-secondary">
+                                {{ user.firstname ? user.firstname : 'not specified' }}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h6 class="mb-0">lastname</h6>
+                            </div>
+                            <div class="col-sm-8 text-secondary">
+                                {{ user.lastname ? user.lastname : 'not specified'}}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h6 class="mb-0">age</h6>
+                            </div>
+                            <div class="col-sm-8 text-secondary">
+                                {{ user.age ? user.age : 'not specified'}}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h6 class="mb-0">adress</h6>
+                            </div>
+                            <div class="col-sm-8 text-secondary">
+                                {{ user.adress ? user.adress : 'not specified'}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+    {# <div class="columns" id="profile">
+
         <div class="column">
             <div class="has-text-centered">
-                {# <figure class="image is-128x128 is-inline-block">
-                    <img class="profile-picture" src="https://bulma.io/images/placeholders/128x128.png">
-                </figure>
-                #}
                 <span class="">pseudo : {{ user.username }}</span><br>
                 <span class="">email : {{ user.email }}</span><br>
                 <span class="">firstname : {{ user.firstname ? user.firstname : 'not specified' }}</span><br>
@@ -22,15 +87,7 @@
 
             </div>
             <hr>
-            {#
-            <div class="columns">
-                <div class="column">
-                    <span class="title is-4">Article where I leave comment</span>
-                    <p><i>coming soon</i></p>
-                </div>
-            </div>
-            #}
 
         </div>
-    </div>
+    </div> #}
 {% endblock %}
