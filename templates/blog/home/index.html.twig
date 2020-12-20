@@ -23,11 +23,7 @@
                 </div>
             </div>
         {% endfor %}
-
-    {% else %}
-        <div class="has-text-centered">
-            <h1 class="title is-4">{{ 'home.no_article'|trans }}</h1>
-        </div>
+        {{ knp_pagination_render(articles) }}
     {% endif %}
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}

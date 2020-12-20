@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="18900693-3dd3-41e5-9ec1-1c079386699f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reset_password/request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/request.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reset_password/reset.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/reset.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/homepage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/homepage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +219,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="front" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>

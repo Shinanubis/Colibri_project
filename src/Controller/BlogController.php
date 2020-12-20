@@ -12,16 +12,25 @@ use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\Routing\Annotation\Route;
+use Knp\Component\Pager\PaginatorInterface;
 
 class BlogController extends AbstractController
 {
     /**
      * @Route("/", name="homepage", methods={"GET"})
      */
-    public function index(): Response
+    public function index(Request $request, PaginatorInterface $paginator): Response
     {
+        $data = $this->getDoctrine()->getRepository(Article::class)->findBy([],['created_at' => 'desc']);
+
+        $articles = $paginator->paginate(
+            $data,
+            $request->query->getInt('page', 1), // number of the current page, pass in the URL, 1 if neither
+            4 // number of result per page
+        );
+
         return $this->render('blog/home/index.html.twig', [
-            'articles' => $this->getDoctrine()->getRepository(Article::class)->findAll(),
+            'articles' => $articles
         ]);
     }
 
