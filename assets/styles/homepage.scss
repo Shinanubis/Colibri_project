@@ -5,3 +5,15 @@
 #homepage{
   background-image: url("../images/homepaper.jpg");
 }
+
+.pagination{
+  margin-left: 40%;
+  max-width: 50%;
+  color: white;
+  .page, .first, .previous, .next, .last{
+    margin: 0 2%;
+    a{
+      color: white;
+    }
+  }
+}
