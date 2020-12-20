@@ -1,0 +1,77 @@
+//article show page
+#article_show{
+  overflow-y: auto;
+  height: 700px;
+  background-color: lightgrey;
+  border-radius: 0.25rem;
+  max-width: 50%;
+  margin: 2% auto;
+  #article_body {
+    padding: 2%;
+
+    p {
+      margin-top: 10%;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .title.is-1 {
+      margin-bottom: -0.2%;
+      padding: 0;
+      font-family: "NerkoOne";
+      font-size: 3.5rem;
+    }
+
+    a {
+      margin-right: 1%;
+    }
+
+    .subtitle.is-6 {
+      font-size: 1rem;
+    }
+
+    #comment_date {
+      font-size: 0.7rem;
+    }
+
+    article.media {
+      margin-left: 2%;
+    }
+
+    #comment-form {
+      margin-left: -2%;
+    }
+
+    .notification {
+      padding: 2%;
+    }
+  }
+  .article-infos li{
+    list-style: none;
+  }
+  #comment_author{
+    font-size: 15px;
+  }
+  #comment_content{
+    font-size: 17px;
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+  #comment_date{
+    margin-top: -0.3rem;
+  }
+  #covered_image{
+    max-width: 100%;
+  }
+}
+@font-face {
+  font-family: "NerkoOne";
+  src: url("../fonts/NerkoOne-Regular.ttf");
+}

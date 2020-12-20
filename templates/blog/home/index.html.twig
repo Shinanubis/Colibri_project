@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     {% if articles is not empty %}
-        {% for article in articles %}
+        {% for article in articles|sort|reverse %}
             <div class="card mt-30">
                 <header class="card-header">
                     <p class="card-header-title">
@@ -10,17 +10,17 @@
                 </header>
                 <div class="card-content">
                     <div class="content">
-                        {{ article.content|slice(0,50) }}
+                        {{ article.content|striptags|slice(0,150) ~ " . . ."}}
                         <br>
                         <time datetime="2016-1-1">{{ article.createdAt|date("d/m/Y") }}</time>
                         by {{ article.author.username }}
                     </div>
                 </div>
-                <footer class="card-footer">
+                <div class="card-footer">
                     <a href="article/{{ article.slug }}" class="card-footer-item is-primary">
                         read more
                     </a>
-                </footer>
+                </div>
             </div>
         {% endfor %}
 
@@ -29,4 +29,7 @@
             <h1 class="title is-4">{{ 'home.no_article'|trans }}</h1>
         </div>
     {% endif %}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock javascripts%}
 {% endblock %}

@@ -31,7 +31,6 @@ class UserController extends AbstractController
      */
     public function edit(Request $request, User $user): Response
     {
-        $user = $this->getUser();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
@@ -42,7 +41,7 @@ class UserController extends AbstractController
         }
 
         return $this->render('blog/user/profile/edit.html.twig', [
-            'user' => $user,
+            'user' => $this->getUser(),
             'form' => $form->createView(),
         ]);
     }
