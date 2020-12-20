@@ -26,13 +26,21 @@
             </h3>
 
             {% for comment in article.comments|sort|reverse %}
-                <div class="content" id="comment">
-                    <div id="comment_author">{{ "by " ~ comment.author.username }}</div>
-                    <div id="comment_date">{{ "at " ~ comment.createdAt|date("d/m/Y") }}</div>
-                    <div id="comment_content">{{ comment.content }}</div>
-                </div>
+                <div class="row">
+                    <div class="col-lg-6">
 
-                <hr class="comments-separator">
+                        <!-- CUSTOM BLOCKQUOTE -->
+                        <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                            <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                            <p class="mb-0 mt-2 font-italic">{{ comment.content }}</p>
+                            <hr>
+                            <footer class="blockquote-footer pt-4 mt-4">
+                                {{ "by " ~ comment.author.username }}{{ " at " ~ comment.createdAt|date("d/m/Y") }}
+                            </footer>
+                        </blockquote><!-- END -->
+
+                    </div>
+                </div>
             {% endfor %}
 
             <div class="columns">
