@@ -31,7 +31,7 @@ class ArticleCrudController extends AbstractCrudController
             AssociationField::new('author')->setValue('Admin'),
             TextField::new('title'),
             TextEditorField::new('content')->setFormType(CKEditorType::class),
-            ImageField::new('covered_image')->setBasePath('/public/uploads/images/covered')->setUploadDir('/public/uploads/images/covered')
+            ImageField::new('covered_image')->setBasePath($this->getParameter('app.path.covered_images'))->setUploadDir($this->getParameter('app.path.upload.covered_images'))
         ];
 
     }
