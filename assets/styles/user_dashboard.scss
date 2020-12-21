@@ -1,19 +1,13 @@
-.container{
-  max-width: 50%;
-  margin-top: 3%;
-  nav{
-    margin: auto;
-  }
-}
-
-
-#edit_form{
-  background-color: lightgrey;
-  max-width: 50%;
-  margin: 2% auto;
-  padding: 2%;
-  ul{
-    list-style: none;
+#profile_show, #profile_edit{
+  .container {
+    max-width: 25%;
+    margin-top: 3%;
+    .col-md-12{
+      margin: 0.3rem;
+    }
+    nav {
+      margin: auto;
+    }
   }
 }
 
