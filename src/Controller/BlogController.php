@@ -4,10 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Entity\Comment;
+use App\Entity\Newsletter;
 use App\Form\CommentType;
+use App\Form\NewsletterType;
 use App\Repository\ArticleRepository;
 use Knp\Component\Pager\Paginator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -105,7 +108,38 @@ class BlogController extends AbstractController
         return $this->render('blog/home/index.html.twig', [
             'articles' => $articles
         ]);
-        //echo $request->request->get("form")["search"];
+    }
+
+    public function newsletterForm()
+    {
+        $form = $this->createForm(NewsletterType::class);
+
+        return $this->render("blog/newsletter.html.twig", [
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/", methods={"POST"})
+     */
+    public function newsletterSubscribe(Request $request): Response
+    {
+        $newsletter = new Newsletter();
+        $form = $this->createForm(NewsletterType::class);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $email = $request->request->get("newsletter")["email"];
+            $newsletter->setEmail($email);
+            $em->persist($newsletter);
+            $em->flush();
+        }
+
+        return $this->redirectToRoute('index');
+
+        //var_dump($request->request);
         //die();
+
     }
 }
