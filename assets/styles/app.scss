@@ -18,6 +18,16 @@ body{
   padding-bottom: 120px
 }
 
+nav{
+  i{
+    color: white;
+  }
+  button{
+    background: none;
+    border: none;
+    font-family: normal;
+  }
+}
 // animation background for login & register
 .gradient-border {
   --borderWidth: 10px;
