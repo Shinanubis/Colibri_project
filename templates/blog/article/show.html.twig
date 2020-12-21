@@ -21,28 +21,6 @@
             </div>
 
             <hr>
-            <h3 class="title is-4">
-                {{ article.comments|length }} {{ article.comments|length <= 1 ? 'comment' : 'comments' }}
-            </h3>
-
-            {% for comment in article.comments|sort|reverse %}
-                <div class="row">
-                    <div class="col-lg-6">
-
-                        <!-- CUSTOM BLOCKQUOTE -->
-                        <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
-                            <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
-                            <p class="mb-0 mt-2 font-italic">{{ comment.content }}</p>
-                            <hr>
-                            <footer class="blockquote-footer pt-4 mt-4">
-                                {{ "by " ~ comment.author.username }}{{ " at " ~ comment.createdAt|date("d/m/Y") }}
-                            </footer>
-                        </blockquote><!-- END -->
-
-                    </div>
-                </div>
-            {% endfor %}
-
             <div class="columns">
                 <div class="column">
                     {% if app.user %}
@@ -64,6 +42,27 @@
                     {% endif %}
                 </div>
             </div>
+            <h3 class="title is-4">
+                {{ article.comments|length }} {{ article.comments|length <= 1 ? 'comment' : 'comments' }}
+            </h3>
+
+            {% for comment in article.comments|sort|reverse %}
+                <div class="row">
+                    <div class="col-lg-6">
+
+                        <!-- CUSTOM BLOCKQUOTE -->
+                        <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                            <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                            <p class="mb-0 mt-2 font-italic">{{ comment.content }}</p>
+                            <hr>
+                            <footer class="blockquote-footer pt-4 mt-4">
+                                {{ "by " ~ comment.author.username }}{{ " at " ~ comment.createdAt|date("d/m/Y") }}
+                            </footer>
+                        </blockquote><!-- END -->
+
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

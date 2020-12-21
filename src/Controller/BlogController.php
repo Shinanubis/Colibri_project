@@ -6,7 +6,9 @@ use App\Entity\Article;
 use App\Entity\Comment;
 use App\Form\CommentType;
 use App\Repository\ArticleRepository;
+use Knp\Component\Pager\Paginator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
@@ -75,5 +77,35 @@ class BlogController extends AbstractController
             'form' => $form->createView(),
             'article' => $article,
         ]);
+    }
+
+    public function searchBar()
+    {
+        $form = $this->createFormBuilder(null)
+                    -> add('search', TextType::class)
+                    -> getForm();
+
+        return $this->render("blog/search_bar.html.twig", [
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/search")
+     */
+
+    public function handleSearch(Request $request, PaginatorInterface $paginator){
+        $search = $request->request->get("form")["search"];
+        $data = $this->getDoctrine()->getRepository(Article::class)->findByTitlePart($search,['created_at' => 'desc']);
+        $articles = $paginator->paginate(
+            $data,
+            $request->query->getInt('page', 1), // number of the current page, pass in the URL, 1 if neither
+            4 // number of result per page
+        );
+        return $this->render('blog/home/index.html.twig', [
+            'articles' => $articles
+        ]);
+        //echo $request->request->get("form")["search"];
+        //die();
     }
 }
