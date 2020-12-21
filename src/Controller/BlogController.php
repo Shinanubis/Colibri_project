@@ -31,7 +31,7 @@ class BlogController extends AbstractController
         $articles = $paginator->paginate(
             $data,
             $request->query->getInt('page', 1), // number of the current page, pass in the URL, 1 if neither
-            4 // number of result per page
+            8 // number of result per page
         );
 
         return $this->render('blog/home/index.html.twig', [
