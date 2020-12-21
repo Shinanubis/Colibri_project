@@ -3,7 +3,7 @@
 {% block body %}
     <div id="article_show">
         {% if article.coveredImage is not null %}
-            <img src="/uploads/images/covered/{{ article.coveredImage }}" alt="{{ article.coveredImage }}" id="covered_image">
+            <img src="{{ vich_uploader_asset(article, 'imageFile')|imagine_filter('card_head') }}" alt="{{ article.coveredImage }}" id="covered_image">
         {% endif %}
         <div id="article_body">
             <h1 class="title is-1 has-text-grey-dark has-text-weight-bold">{{ article.title }}</h1>
@@ -17,30 +17,10 @@
             </h2>
 
             <div class="article-content">
-                <p>{{ article.content }}</p>
+                <p>{{ article.content|raw }}</p>
             </div>
 
             <hr>
-            <h3 class="title is-4">
-                {{ article.comments|length }} {{ article.comments|length <= 1 ? 'comment' : 'comments' }}
-            </h3>
-
-            {% for comment in article.comments|sort|reverse %}
-                <article class="">
-                    <div class="">
-                        <div class="content" id="comment">
-                            <p>
-                                <strong>{{ comment.author.username }}</strong>
-                                <div id="comment_date">{{ comment.createdAt|date("d/m/Y") }}</div>
-                                <br>
-                                {{ comment.content }}
-                            </p>
-                        </div>
-                    </div>
-                </article>
-                <hr class="comments-separator">
-            {% endfor %}
-
             <div class="columns">
                 <div class="column">
                     {% if app.user %}
@@ -62,6 +42,27 @@
                     {% endif %}
                 </div>
             </div>
+            <h3 class="title is-4">
+                {{ article.comments|length }} {{ article.comments|length <= 1 ? 'comment' : 'comments' }}
+            </h3>
+
+            {% for comment in article.comments|sort|reverse %}
+                <div class="row">
+                    <div class="col-lg-6">
+
+                        <!-- CUSTOM BLOCKQUOTE -->
+                        <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                            <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                            <p class="mb-0 mt-2 font-italic">{{ comment.content }}</p>
+                            <hr>
+                            <footer class="blockquote-footer pt-4 mt-4">
+                                {{ "by " ~ comment.author.username }}{{ " at " ~ comment.createdAt|date("d/m/Y") }}
+                            </footer>
+                        </blockquote><!-- END -->
+
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

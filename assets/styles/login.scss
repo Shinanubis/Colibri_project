@@ -1,0 +1,24 @@
+//login page
+#login_form{
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  padding-top: 15%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+
+  #login_rememberMe{
+    margin-top: 1rem !important;
+  }
+  i{
+    font-size: 72px;
+    color: #0f6ab4;
+  }
+  input{
+    margin-bottom: 5%;
+  }
+  .form_page{
+    padding: 5%;
+  }
+}

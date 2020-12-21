@@ -1,32 +1,25 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     {% if articles is not empty %}
-        {% for article in articles %}
-            <div class="card mt-30">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        {{ article.title }}
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        {{ article.content|slice(0,50) }}
-                        <br>
-                        <time datetime="2016-1-1">{{ article.createdAt|date("d/m/Y") }}</time>
-                        by {{ article.author.username }}
+        <div class="container-fluid" id="homepage">
+            <div class="row">
+                {% for article in articles|sort|reverse %}
+                    <div class="col-3 mb-3">
+                        <div class="card">
+                            <img src="{{ vich_uploader_asset(article, 'imageFile')|imagine_filter('card_head_min') }}" alt="{{ article.coveredImage }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ article.title }}</h5>
+                                <p class="card-text">{{ article.content|striptags|slice(0,50)}}</p>
+                                <a href="article/{{ article.slug }}" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <footer class="card-footer">
-                    <a href="article/{{ article.slug }}" class="card-footer-item is-primary">
-                        read more
-                    </a>
-                </footer>
+                {% endfor %}
             </div>
-        {% endfor %}
-
-    {% else %}
-        <div class="has-text-centered">
-            <h1 class="title is-4">{{ 'home.no_article'|trans }}</h1>
         </div>
+        {{ knp_pagination_render(articles) }}
     {% endif %}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock javascripts%}
 {% endblock %}

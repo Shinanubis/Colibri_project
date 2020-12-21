@@ -1,0 +1,25 @@
+//registration page
+#register{
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  padding-top: 15%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  i{
+    font-size: 72px;
+    color: #0f6ab4;
+  }
+  input{
+    margin-bottom: 5%;
+    width: 100%;
+  }
+  #registration_form_agreeTerms{
+    width: 0%;
+    margin-left: 2%;
+  }
+  .form_page{
+    padding: 5%;
+  }
+}

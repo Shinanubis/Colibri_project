@@ -1,0 +1,40 @@
+# See dos how to configure the bundle: https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html
+liip_imagine:
+    # valid drivers options include "gd" or "gmagick" or "imagick"
+    driver: "gd"
+    # liste of filters
+    filter_sets:
+        # filter name
+        square:
+            # quality of image
+            quality: 75
+            # liste of filter to apply
+            filters:
+                # "Thumbnail" filter
+                thumbnail:
+                    # size of output's image
+                    size: [ 300, 300 ]
+                    # cute image
+                    mode: outbound
+        card_head_min:
+            # quality of image
+            quality: 75
+            # liste of filter to apply
+            filters:
+                # "Thumbnail" filter
+                thumbnail:
+                    # size of output's image
+                    size: [ 253, 142 ]
+                    # cute image
+                    mode: outbound
+        card_head:
+            # quality of image
+            quality: 75
+            # liste of filter to apply
+            filters:
+                # "Thumbnail" filter
+                thumbnail:
+                    # size of output's image
+                    size: [ 918, 700 ]
+                    # cute image
+                    mode: outbound

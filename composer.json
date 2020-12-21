@@ -15,6 +15,8 @@
         "fortawesome/font-awesome": "^5.15",
         "friendsofsymfony/ckeditor-bundle": "^2.2",
         "helios-ag/fm-elfinder-bundle": "^10.0",
+        "knplabs/knp-paginator-bundle": "^5.4",
+        "liip/imagine-bundle": "^2.3",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^5.1",
         "stof/doctrine-extensions-bundle": "^1.5",
@@ -88,7 +90,9 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
+            "assets:install --symlink": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "ckeditor:install": "symfony-cmd",
             "elfinder:install": "symfony-cmd"
         },
         "post-install-cmd": [

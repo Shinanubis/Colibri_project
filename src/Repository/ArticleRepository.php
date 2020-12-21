@@ -27,6 +27,16 @@ class ArticleRepository extends ServiceEntityRepository
             ->getSingleScalarResult();
     }
 
+    public function findByTitlePart($title)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p FROM App:Article p WHERE p.title LIKE :title'
+            )
+            ->setParameter('title', '%' . $title . '%')
+            ->getResult();
+    }
+
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */

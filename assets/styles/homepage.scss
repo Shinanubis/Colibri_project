@@ -1,0 +1,24 @@
+.pagination{
+  margin-left: 40%;
+  margin-top: -10rem;
+  max-width: 50%;
+  color: white;
+  .page, .first, .previous, .next, .last{
+    margin: 0 2%;
+    a{
+      color: white;
+    }
+  }
+}
+#homepage{
+  .row {
+    margin: 10% 20%;
+    margin-top: 5rem;
+    .col-3 {
+      padding-right: 0px;
+      .card {
+        max-width: 100%;
+      }
+    }
+  }
+}
