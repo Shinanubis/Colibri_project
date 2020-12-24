@@ -5,9 +5,11 @@ namespace App\Controller;
 use App\Entity\Article;
 use App\Entity\Comment;
 use App\Entity\Newsletter;
+use App\Entity\Tag;
 use App\Form\CommentType;
 use App\Form\NewsletterType;
 use App\Repository\ArticleRepository;
+use ContainerIbzGfs4\getTagCrudControllerService;
 use Knp\Component\Pager\Paginator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -26,16 +28,17 @@ class BlogController extends AbstractController
      */
     public function index(Request $request, PaginatorInterface $paginator): Response
     {
+
         $data = $this->getDoctrine()->getRepository(Article::class)->findBy([],['created_at' => 'desc']);
+
 
         $articles = $paginator->paginate(
             $data,
             $request->query->getInt('page', 1), // number of the current page, pass in the URL, 1 if neither
             8 // number of result per page
         );
-
         return $this->render('blog/home/index.html.twig', [
-            'articles' => $articles
+            'articles' => $articles,
         ]);
     }
 

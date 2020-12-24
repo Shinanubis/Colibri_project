@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Entity\User;
+use App\Entity\Tag;
 use App\Repository\ArticleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -77,6 +78,12 @@ class Article
      */
     private $imageFile;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="articles", cascade={"persist"})
+     * @ORM\JoinColumn(name="tag_id")
+     */
+    private $tag;
+
 
     /**
      * Article constructor.
@@ -86,6 +93,7 @@ class Article
         $this->created_at = new \DateTime('now');
         $this->update_at = new \DateTime('now');
         $this->comments = new ArrayCollection();
+        $this->tag = new ArrayCollection();
     }
 
 
@@ -223,6 +231,30 @@ class Article
     public function setCoveredImage(?string $covered_image): self
     {
         $this->covered_image = $covered_image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tag[]
+     */
+    public function getTag(): Collection
+    {
+        return $this->tag;
+    }
+
+    public function addTag(Tag $tag): self
+    {
+        if (!$this->tag->contains($tag)) {
+            $this->tag[] = $tag;
+        }
+
+        return $this;
+    }
+
+    public function removeTag(Tag $tag): self
+    {
+        $this->tag->removeElement($tag);
 
         return $this;
     }

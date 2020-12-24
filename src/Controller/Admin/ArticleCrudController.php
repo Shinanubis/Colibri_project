@@ -6,6 +6,7 @@ use App\Entity\Article;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
@@ -31,7 +32,8 @@ class ArticleCrudController extends AbstractCrudController
             AssociationField::new('author')->setValue('Admin'),
             TextField::new('title'),
             TextEditorField::new('content')->setFormType(CKEditorType::class),
-            ImageField::new('covered_image')->setBasePath($this->getParameter('app.path.covered_images'))->setUploadDir($this->getParameter('app.path.upload.covered_images'))
+            ImageField::new('covered_image')->setBasePath($this->getParameter('app.path.covered_images'))->setUploadDir($this->getParameter('app.path.upload.covered_images')),
+            AssociationField::new('tag'),
         ];
 
     }

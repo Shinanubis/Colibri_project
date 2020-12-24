@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18900693-3dd3-41e5-9ec1-1c079386699f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Colibri_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Colibri_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/homepage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/homepage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminDashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/newsletter.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/newsletter.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/search_bar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/search_bar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="newsletter" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -170,8 +178,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/uploads/images/covered" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony-blog" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -210,6 +219,9 @@
       <workItem from="1608454922195" duration="2778000" />
       <workItem from="1608533031762" duration="3663000" />
       <workItem from="1608541589572" duration="803000" />
+      <workItem from="1608631497576" duration="9332000" />
+      <workItem from="1608735031613" duration="13615000" />
+      <workItem from="1608813204028" duration="3232000" />
     </task>
     <servers />
   </component>

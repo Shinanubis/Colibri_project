@@ -1,9 +1,9 @@
 {{ form_start(form,{
-    'attr': {'class': 'navbar-form navbar-right form-inline', 'placeholder': 'Search', 'action': '/search', 'autocomplete': 'on'}
+    'attr': {'class': 'navbar-form navbar-right form-inline', 'action': '/search', 'autocomplete': 'on'}
 }) }}
 
 {{ form_widget(form.search, {
-    'attr' : {'class': 'form-control search-query form-control-sm mr-3 w-75'}
+    'attr' : {'class': 'form-control search-query form-control-sm mr-3 w-75', 'placeholder': 'Search'}
 }) }}
 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 
