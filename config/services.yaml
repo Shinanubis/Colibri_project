@@ -7,6 +7,7 @@ parameters:
     # add alias path to the folder
     app.path.covered_images: /uploads/images/covered
     app.path.upload.covered_images: public/uploads/images/covered
+    locale: en
 services:
     # default configuration for services in *this* file
     _defaults:

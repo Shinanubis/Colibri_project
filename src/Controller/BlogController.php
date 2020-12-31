@@ -102,7 +102,7 @@ class BlogController extends AbstractController
 
     public function handleSearch(Request $request, PaginatorInterface $paginator){
         $search = $request->request->get("form")["search"];
-        $data = $this->getDoctrine()->getRepository(Article::class)->findByTitlePart($search,['created_at' => 'desc']);
+        $data = $this->getDoctrine()->getRepository(Article::class)->findByString($search,['created_at' => 'desc']);
         $articles = $paginator->paginate(
             $data,
             $request->query->getInt('page', 1), // number of the current page, pass in the URL, 1 if neither
@@ -145,4 +145,13 @@ class BlogController extends AbstractController
         //die();
 
     }
+    /**
+     * @Route("/change_locale/{locale}", name="change_locale")
+     */
+    public function changeLocale($locale, Request $request)
+    {
+        $request->getSession()->set('_locale', $locale);
+        return $this->redirect($request->headers->get('referer'));
+    }
+
 }

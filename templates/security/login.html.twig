@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}{{ "signin.title"|trans }}{% endblock %}
 
 {% block body %}
     <form class="col-md-4 col-md-offset-4" id="login_form" method="post">
@@ -16,20 +16,20 @@
                 </div>
             {% endif %}
             <i class="fa fa-sign-in fa-6x"></i>
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <h1 class="h3 mb-3 font-weight-normal">{{ "signin.head"|trans }}</h1>
+            <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" placeholder="{{ "signin.placeholder.username"|trans|raw}}" required autofocus>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="{{ "signin.placeholder.password"|trans|raw}}" required>
 
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
             <div class="checkbox mb-3">
                 <label id="login_rememberMe" class="text-center">
-                    <input type="checkbox" name="_remember_me"> Remember me
+                    <input type="checkbox" name="_remember_me">{{ "signin.remember"|trans }}
                 </label>
             </div>
 
             <button class="btn btn-lg btn-primary btn-block" type="submit">
-                Sign in
+                {{ "signin.button"|trans }}
             </button>
         </div>
     </form>

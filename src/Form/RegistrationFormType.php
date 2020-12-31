@@ -21,15 +21,15 @@ class RegistrationFormType extends AbstractType
             ->add('email', EmailType::class, [
                 'label' => false,
                 'attr' => array(
-                    'placeholder'=>'Email',),
+                    'placeholder'=>'signup.placeholder.email',),
             ])
             ->add('username', null, [
                 'label' => false,
                 'attr' => array(
-                    'placeholder'=>'Username',),
+                    'placeholder'=>'signup.placeholder.username',),
             ])
             ->add('agreeTerms', CheckboxType::class, [
-                'label' => 'Agree Terms',
+                'label' => 'signup.agreeTerms',
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
@@ -41,7 +41,7 @@ class RegistrationFormType extends AbstractType
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'attr' => array(
-                    'placeholder'=>'Password',),
+                    'placeholder'=>'signup.placeholder.password',),
                 'label' => false,
                 'mapped' => false,
                 'constraints' => [

@@ -4,15 +4,15 @@
     <div class="media-content">
 
         <div class="field">
-            {{ form_label(form.content, 'leave comment', {'label_attr': {'class': 'label'}}) }}
+            {{ form_label(form.content, 'article.comment.label'|trans, {'label_attr': {'class': 'label'}}) }}
             <p class="control">
-                {{ form_widget(form.content, {'attr': {'class': 'textarea', 'placeholder': 'write comment '}}) }}
+                {{ form_widget(form.content, {'attr': {'class': 'textarea', 'placeholder': 'article.comment.placeholder'|trans}}) }}
             </p>
         </div>
         <div class="field">
             <p class="control">
                 {{ form_rest(form) }}
-                <button type="submit" class="btn btn-lg btn-primary">Post</button>
+                <button type="submit" class="btn btn-lg btn-primary">{{ "article.comment.button"|trans }}</button>
             </p>
         </div>
     </div>
