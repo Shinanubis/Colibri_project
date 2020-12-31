@@ -170,25 +170,29 @@
       </trans-unit>
       <trans-unit id="40">
         <source>article.comment</source>
-        <target>{count, plural, =0 {No items found.} one {One item found.} other {# items found.}}</target>
+        <target>Comment</target>
       </trans-unit>
       <trans-unit id="41">
+        <source>article.comments</source>
+        <target>Comments</target>
+      </trans-unit>
+      <trans-unit id="42">
         <source>article.comment.by</source>
         <target>By: </target>
       </trans-unit>
-      <trans-unit id="42">
+      <trans-unit id="43">
         <source>article.comment.at</source>
         <target>At: </target>
       </trans-unit>
-      <trans-unit id="43">
+      <trans-unit id="44">
         <source>article.comment.label</source>
         <target>Write a comment</target>
       </trans-unit>
-      <trans-unit id="44">
+      <trans-unit id="45">
         <source>article.comment.placeholder</source>
         <target>Your comment</target>
       </trans-unit>
-      <trans-unit id="45">
+      <trans-unit id="46">
         <source>article.comment.button</source>
         <target>Post</target>
       </trans-unit>
