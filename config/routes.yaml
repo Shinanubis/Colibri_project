@@ -17,5 +17,16 @@ user_edit:
     path: /user/profile/edit
     controller: App\Controller\UserController::edit
 
+app_check_email:
+    path: /check-email
+    controller: App\Controller\ResetPasswordController::checkEmail
+
+app_forgot_password_request:
+    path: /reset-password
+    controller: App\Controller\ResetPasswordController::request
+
+app_reset_password:
+    path: /reset
+    controller: App\Controller\ResetPasswordController::reset
 # elfinder:
 #    resource: "@FMElfinderBundle/Resources/config/routing.yaml"

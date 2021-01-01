@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="18900693-3dd3-41e5-9ec1-1c079386699f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/article/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/article/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ChangePasswordFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ChangePasswordFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/check_email.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reset_password/request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/request.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reset_password/reset.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/reset.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/translations/messages.en.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.en.xlf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/translations/messages.fr.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.fr.xlf" afterDir="false" />
     </list>
@@ -244,7 +249,7 @@
       <workItem from="1609407839035" duration="200000" />
       <workItem from="1609408148977" duration="85000" />
       <workItem from="1609408505904" duration="168000" />
-      <workItem from="1609408867957" duration="17359000" />
+      <workItem from="1609408867957" duration="26956000" />
     </task>
     <servers />
   </component>

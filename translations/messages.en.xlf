@@ -18,7 +18,7 @@
       </trans-unit>
       <trans-unit id="4">
         <source>navbar.signout</source>
-        <target>Deconnexion</target>
+        <target>Sign Out</target>
       </trans-unit>
       <trans-unit id="5">
         <source>navbar.user</source>
@@ -196,6 +196,45 @@
         <source>article.comment.button</source>
         <target>Post</target>
       </trans-unit>
+    <!-- Reset password-->
+      <trans-unit id="47">
+        <source>resetPassword.title</source>
+        <target>Reset password</target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>resetPassword.h1</source>
+        <target>Reset password</target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>resetPassword.information</source>
+        <target>Enter your email address and we we will send you a
+link to reset your password.</target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>resetPassword.button.sendEmail</source>
+        <target>Send password reset email</target>
+      </trans-unit>
+      <trans-unit id="51">
+        <source>resetPassword.checkEmail.succes</source>
+        <target>
+          <![CDATA[
+            <p>An email has been sent that contains a link that you can click to reset your password.</p>
+            <p>If you don't receive an email please check your spam folder or <a href="%link%">try again</a>.</p>
+            <br>this link expire in
+          ]]>
+        </target>
+      </trans-unit>
+      <trans-unit id="52">
+        <source>resetPassword.hour</source>
+        <target>hour(s)</target>
+      </trans-unit>
+      <trans-unit id="53">
+        <source>resetPassword.button.password</source>
+        <target>Reset password</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
+<!--Password Reset Email Sent
+<p>An email has been sent that contains a link that you can click to reset your password. This link will expire in {{ tokenLifetime|date('g') }} hour(s).</p>
+        <p>If you don't receive an email please check your spam folder or <a href="{{ path('app_forgot_password_request') }}">try again</a>.</p>-->

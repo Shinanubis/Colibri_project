@@ -198,6 +198,49 @@
         <source>article.comment.button</source>
         <target>Envoyer</target>
       </trans-unit>
+    <!-- Reset password-->
+      <trans-unit id="47">
+        <source>resetPassword.title</source>
+        <target>Renouvellement du mot de passe</target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>resetPassword.h1</source>
+        <target>Renouveler mot de passe</target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>resetPassword.information</source>
+        <target>Entrez votre email et vous recevrez un mail contenant un lien pour reinitialiser votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>resetPassword.button.sendEmail</source>
+        <target>Reinitialiser mot de passe</target>
+      </trans-unit>
+      <trans-unit id="51">
+        <source>resetPassword.checkEmail.succes</source>
+        <target>
+          <![CDATA[
+            <p>Un email vous a été envoyé contenant un lien pour réinitialiser votre mot de passe.</p>
+            <p>Si vous ne recevez pas l'email regarder sans vos courriers indésirable ou <a href="%link%">essayer de nouveau</a>.</p>
+            <br>Ce lien expire dans
+          ]]>
+        </target>
+      </trans-unit>
+      <trans-unit id="52">
+        <source>resetPassword.hour</source>
+        <target>heure(s)</target>
+      </trans-unit>
+      <trans-unit id="53">
+        <source>resetPassword.button.password</source>
+        <target>Reinitialiser mot de passe</target>
+      </trans-unit>
+      <trans-unit id="54">
+        <source>resetPassword.new</source>
+        <target>Nouveau mot de passe</target>
+      </trans-unit>
+      <trans-unit id="55">
+        <source>resetPassword.repeatPassword</source>
+        <target>Repeter mot de passe</target>
+      </trans-unit>
       <trans-unit id="">
         <source></source>
         <target></target>
