@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext"
+  original="file.ext">
+    <body>
+
+    <!-- Navbar -->
+      <trans-unit id="1">
+        <source>navbar.signup</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>navbar.placeholder.search</source>
+        <target>Rechercher</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>navbar.signin</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>navbar.signout</source>
+        <target>Deconnexion</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>navbar.user</source>
+        <target>%username%</target>
+      </trans-unit>
+
+    <!-- Login page -->
+      <trans-unit id="6">
+        <source>signin.title</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>signin.head</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>signin.placeholder.username</source>
+        <target>Nom&amp;nbsp;d'utilisateur</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>signin.placeholder.password</source>
+        <target>Mot&amp;nbsp;de&amp;nbsp;passe</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>signin.remember</source>
+        <target>Se souvenir de moi</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>signin.button</source>
+        <target>Se connecter</target>
+      </trans-unit>
+    <!-- Register page -->
+      <trans-unit id="12">
+        <source>signup.title</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>signup.head</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>signup.placeholder.email</source>
+        <target>Adresse email</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>signup.placeholder.username</source>
+        <target>Nom d'utilisateur</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>signup.placeholder.password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>signup.agreeTerms</source>
+        <target>accepter conditions d'utilisation</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>signup.button</source>
+        <target>S'inscrire</target>
+      </trans-unit>
+    <!-- User Profile -->
+      <!-- Show -->
+      <trans-unit id="19">
+        <source>user.profile.title</source>
+        <target>Profil utilisateur</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>user.profile.show</source>
+        <target>Voir</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>user.profile.edit</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>profile.show.firstname</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>profile.show.lastname</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>profile.show.address</source>
+        <target>Adresse</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>profile.show.age</source>
+        <target>Age</target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source></source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>profile.show.notSpecified</source>
+        <target>Non renseigné</target>
+      </trans-unit>
+      <!-- Edit -->
+      <trans-unit id="28">
+        <source>user.profile.title</source>
+        <target>Profil utilisateur</target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>user.profile.edit</source>
+        <target>Voir</target>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>user.profile.edit</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>profile.edit.firstname</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>profile.edit.lastname</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>profile.edit.address</source>
+        <target>Adresse</target>
+      </trans-unit>
+      <trans-unit id="34">
+        <source>profile.edit.age</source>
+        <target>Age</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>profile.edit.button</source>
+        <target>Enregistrer</target>
+      </trans-unit>
+    <!-- Newsletter -->
+      <trans-unit id="36">
+        <source>newsletter.placeholder</source>
+        <target>Entrez votre email pour recevoir la newsletter</target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>newsletter.button</source>
+        <target>Souscrire</target>
+      </trans-unit>
+    <!-- Homepage -->
+      <trans-unit id="38">
+        <source>article.button.read</source>
+        <target>Lire plus</target>
+      </trans-unit>
+    <!-- Article -->
+      <trans-unit id="39">
+        <source>article.by</source>
+        <target>Par</target>
+      </trans-unit>
+      <trans-unit id="40">
+        <source>article.comment</source>
+        <target>Commentaire</target>
+      </trans-unit>
+      <trans-unit id="41">
+        <source>article.comments</source>
+        <target>Commentaires</target>
+      </trans-unit>
+      <trans-unit id="42">
+        <source>article.comment.by</source>
+        <target>Par: </target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>article.comment.at</source>
+        <target>Le: </target>
+      </trans-unit>
+      <trans-unit id="44">
+        <source>article.comment.label</source>
+        <target>Ecrire un commentaire</target>
+      </trans-unit>
+      <trans-unit id="45">
+        <source>article.comment.placeholder</source>
+        <target>Votre commentaire</target>
+      </trans-unit>
+      <trans-unit id="46">
+        <source>article.comment.button</source>
+        <target>Envoyer</target>
+      </trans-unit>
+    <!-- Reset password-->
+      <trans-unit id="47">
+        <source>resetPassword.title</source>
+        <target>Renouvellement du mot de passe</target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>resetPassword.h1</source>
+        <target>Renouveler mot de passe</target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>resetPassword.information</source>
+        <target>Entrez votre email et vous recevrez un mail contenant un lien pour reinitialiser votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>resetPassword.button.sendEmail</source>
+        <target>Reinitialiser mot de passe</target>
+      </trans-unit>
+      <trans-unit id="51">
+        <source>resetPassword.checkEmail.succes</source>
+        <target>
+          <![CDATA[
+            <p>Un email vous a été envoyé contenant un lien pour réinitialiser votre mot de passe.</p>
+            <p>Si vous ne recevez pas l'email regarder sans vos courriers indésirable ou <a href="%link%">essayer de nouveau</a>.</p>
+            <br>Ce lien expire dans
+          ]]>
+        </target>
+      </trans-unit>
+      <trans-unit id="52">
+        <source>resetPassword.hour</source>
+        <target>heure(s)</target>
+      </trans-unit>
+      <trans-unit id="53">
+        <source>resetPassword.button.password</source>
+        <target>Reinitialiser mot de passe</target>
+      </trans-unit>
+      <trans-unit id="54">
+        <source>resetPassword.new</source>
+        <target>Nouveau mot de passe</target>
+      </trans-unit>
+      <trans-unit id="55">
+        <source>resetPassword.repeatPassword</source>
+        <target>Repeter mot de passe</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source></source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

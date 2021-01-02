@@ -2,6 +2,9 @@
     "behat/transliterator": {
         "version": "v1.3.0"
     },
+    "components/jquery": {
+        "version": "3.5.1"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.1"
     },

@@ -10,9 +10,10 @@
             <h2 class="subtitle is-6">
                 <ul class="article-infos">
                     <li><i class="fa fa-calendar" aria-hidden="true"></i> {{ article.createdAt|date("d/m/Y") }}</li>
-                    <li><i class="fa fa-user" aria-hidden="true"></i> by: {{ article.author.username|capitalize }}</li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i> {{ "article.by"|trans }}: {{ article.author.username|capitalize }}</li>
                     <li><i class="fa fa-commenting" aria-hidden="true"></i> {{ article.comments.count }}
-                        {{ article.comments.count <= 1 ? 'comment' : 'comments' }}</li>
+                        {{ article.comments.count <= 1 ? 'article.comment'|trans : 'article.comments'|trans }}
+                    </li>
                 </ul>
             </h2>
 
@@ -43,7 +44,8 @@
                 </div>
             </div>
             <h3 class="title is-4">
-                {{ article.comments|length }} {{ article.comments|length <= 1 ? 'comment' : 'comments' }}
+                {{ article.comments|length }}
+                {{ article.comments.count <= 1 ? 'article.comment'|trans : 'article.comments'|trans }}
             </h3>
 
             {% for comment in article.comments|sort|reverse %}
@@ -56,7 +58,8 @@
                             <p class="mb-0 mt-2 font-italic">{{ comment.content }}</p>
                             <hr>
                             <footer class="blockquote-footer pt-4 mt-4">
-                                {{ "by " ~ comment.author.username }}{{ " at " ~ comment.createdAt|date("d/m/Y") }}
+                                {{ "article.comment.by"|trans }}{{ comment.author.username }}
+                                {{ "article.comment.at"|trans }}{{comment.createdAt|date("d/m/Y") }}
                             </footer>
                         </blockquote><!-- END -->
 

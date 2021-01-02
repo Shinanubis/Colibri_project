@@ -80,6 +80,7 @@ class Article
 
     /**
      * @ORM\ManyToMany(targetEntity=Tag::class, inversedBy="articles", cascade={"persist"})
+     * @ORM\JoinTable(name="article_tag")
      * @ORM\JoinColumn(name="tag_id")
      */
     private $tag;

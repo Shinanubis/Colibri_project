@@ -27,14 +27,23 @@ class ArticleRepository extends ServiceEntityRepository
             ->getSingleScalarResult();
     }
 
-    public function findByTitlePart($title)
+    public function findByString($string)
     {
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT p FROM App:Article p WHERE p.title LIKE :title'
+                'SELECT p FROM App:Article p WHERE p.title LIKE :string'
             )
-            ->setParameter('title', '%' . $title . '%')
+            ->setParameter('string', '%' . $string . '%')
             ->getResult();
+    }
+    public function findByTag($tag)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p FROM App:Article p WHERE :tag MEMBER OF p.tag'
+            )
+            ->setParameter('tag', '%' . $tag . '%')
+            ->getArrayResult();
     }
 
     // /**

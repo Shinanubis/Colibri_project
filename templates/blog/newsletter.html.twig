@@ -3,8 +3,8 @@
 }) }}
 
 {{ form_widget(form.email, {
-    'attr' : {'class': 'form-control', "placeholder":" Email here for subscribe to Newsletter"}
+    'attr' : {'class': 'form-control', "placeholder":'newsletter.placeholder'|trans}
 }) }}
-<button type="submit" class="input-group-btn btn bg-success">Subscribe</button>
+<button type="submit" class="input-group-btn btn bg-success">{{ "newsletter.button"|trans }}</button>
 
 {{ form_end(form) }}

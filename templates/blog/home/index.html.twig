@@ -10,7 +10,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ article.title }}</h5>
                                 <p class="card-text">{{ article.content|striptags|slice(0,50)}}</p>
-                                <a href="article/{{ article.slug }}" class="btn btn-outline-success btn-sm">Read More</a>
+                                <a href="article/{{ article.slug }}" class="btn btn-outline-success btn-sm">{{ "article.button.read"|trans }}</a>
                                 {% for tag in article.tag %}
                                     <span class="badge bg-success"><i class="fa fa-tags"></i>{{tag.name}}</span>
                                 {% endfor %}

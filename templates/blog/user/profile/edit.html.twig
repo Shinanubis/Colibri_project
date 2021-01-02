@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit User{% endblock %}
+{% block title %}{{ "user.profile.title"|trans }}{% endblock %}
 
 {% block body %}
 <div id="profile_edit">
@@ -10,9 +10,9 @@
                 <div class="col-md-12">
                     <div class="card">
                         <nav class="navbar navbar-expand-sm">
-                            <a href="{{ path('user_profile') }}">Profile</a>
+                            <a href="{{ path('user_profile') }}">{{ "user.profile.show"|trans }}</a>
                             {{ "&nbsp / &nbsp" }}
-                            <a href="{{ path('user_edit') }}/{{ app.user.id }}">  Edit</a>
+                            <a href="{{ path('user_edit') }}/{{ app.user.id }}">{{ "user.profile.edit"|trans }}</a>
                         </nav>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <h6 class="mb-0">firstname</h6>
+                                    <h6 class="mb-0">{{ "profile.edit.firstname"|trans }}</h6>
                                 </div>
                                 <div class="col-sm-8 text-secondary">
                                     {{ form_row(form.firstname) }}
@@ -44,7 +44,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <h6 class="mb-0">lastname</h6>
+                                    <h6 class="mb-0">{{ "profile.edit.lastname"|trans }}</h6>
                                 </div>
                                 <div class="col-sm-8 text-secondary">
                                     {{ form_row(form.lastname) }}
@@ -53,7 +53,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <h6 class="mb-0">age</h6>
+                                    <h6 class="mb-0">{{ "profile.edit.age"|trans }}</h6>
                                 </div>
                                 <div class="col-sm-8 text-secondary">
                                     {{ form_row(form.age) }}
@@ -62,7 +62,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <h6 class="mb-0">adress</h6>
+                                    <h6 class="mb-0">{{ "profile.edit.address"|trans }}</h6>
                                 </div>
                                 <div class="col-sm-8 text-secondary">
                                     {{ form_row(form.adress) }}
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <button class="btn btn-lg btn-success">
-                            {{ button_label|default('Save') }}
+                            {{ button_label|default('profile.edit.button'|trans) }}
                         </button>
                     </div>
                     {{ form_end(form) }}

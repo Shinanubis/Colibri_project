@@ -9,44 +9,53 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
 
-                {% if app.user %}
-                    {% if app.user.roles == ['ROLE_ADMIN']%}
-                        <a class="nav-link" href="{{ path('admin') }}">
-                            <i class="fa fa-dashboard">
-                                Dashboard
-                            </i>
-                        </a>
-                        <a class="nav-link" href="{{ path('app_logout') }}">
-                            <i class="fa fa-sign-out">
-                                Sign Out
-                            </i>
-                        </a>
-                    {% else%}
-                        <a class="nav-link" href="{{ path('user_profile') }}">
-                            <i class="fa fa-user-circle">
-                                User
-                            </i>
-                        </a>
-                        <a class="nav-link" href="{{ path('app_logout') }}">
-                            <i class="fa fa-sign-out">
-                                Sign Out
-                            </i>
-                        </a>
-                    {% endif %}
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="deroulantb" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lang {{ app.request.locale|upper }}</button>
+                <div class="dropdown-menu" aria-labelledby="deroulantb">
+                    <a class="dropdown-item" href="{{ path('change_locale', {'locale': 'fr'}) }}" class="navbar-item">FR</a>
+                    <a class="dropdown-item" href="{{ path('change_locale', {'locale': 'en'}) }}" class="navbar-item">EN</a>
+                </div>
+            </div>
+
+            {% if app.user %}
+                {% if app.user.roles == ['ROLE_ADMIN']%}
+                    <a class="nav-link" href="{{ path('admin') }}">
+                        <i class="fa fa-dashboard">
+                            Dashboard
+                        </i>
+                    </a>
+                    <a class="nav-link" href="{{ path('app_logout') }}">
+                        <i class="fa fa-sign-out">
+                            {{ "navbar.signout"|trans }}
+                        </i>
+                    </a>
                 {% else%}
-                    <a class="nav-link" href="{{ path('login') }}">
-                        <i class="fa fa-sign-in">
-                            Sign In
+                    <a class="nav-link" href="{{ path('user_profile') }}">
+                        <i class="fa fa-user-circle">
+                            {{ "navbar.user"|trans({'%username%': app.user.username}) }}
+                        </i>
+                    </a>
+                    <a class="nav-link" href="{{ path('app_logout') }}">
+                        <i class="fa fa-sign-out">
+                            {{ "navbar.signout"|trans }}
                         </i>
                     </a>
                 {% endif %}
-            {% if app.user == false %}
-                <a class="nav-link" href="{{ path('registration') }}">
-                    <i class="fa fa-user-plus">
-                        Sign Up
+            {% else%}
+                <a class="nav-link" href="{{ path('login') }}">
+                    <i class="fa fa-sign-in">
+                        {{ "navbar.signin"|trans }}
                     </i>
                 </a>
             {% endif %}
+            {% if app.user == false %}
+                <a class="nav-link" href="{{ path('registration') }}">
+                    <i class="fa fa-user-plus">
+                        {{ "navbar.signup"|trans }}
+                    </i>
+                </a>
+            {% endif %}
+
         </ul>
     </div>
 </nav>
