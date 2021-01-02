@@ -3,17 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="18900693-3dd3-41e5-9ec1-1c079386699f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/62710.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/Capture d’écran de 2020-08-24 14-54-24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/Capture d’écran de 2020-09-01 14-38-38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/Capture d’écran de 2020-11-02 11-38-36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/Diluc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/b5d544c4b9cd1489a61b67659a9a6655.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/food1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/img2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/images/covered/person4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AdminDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AdminDashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -33,12 +33,16 @@ class AdminDashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()->setTitle('Colibri Project');
+
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
+
+        yield MenuItem::linktoUrl('Blog', 'fa fa-home','/');
+        yield MenuItem::section('User');
         yield MenuItem::linkToCrud('User', 'fas fa-user', User::class);
+        yield MenuItem::section('Article');
         yield MenuItem::linkToCrud('Article', 'fas fa-newspaper', Article::class);
         yield MenuItem::linkToCrud('Comment', 'fas fa-comments', Comment::class);
         yield MenuItem::linkToCrud('Tag', 'fas fa-tags', Tag::class);

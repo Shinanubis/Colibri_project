@@ -25,11 +25,6 @@ class Tag
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=50, nullable=true)
-     */
-    private $color;
-
-    /**
      * @ORM\ManyToMany(targetEntity=Article::class, mappedBy="tag")
      */
     private $articles;
@@ -52,18 +47,6 @@ class Tag
     public function setName(string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getColor(): ?string
-    {
-        return $this->color;
-    }
-
-    public function setColor(?string $color): self
-    {
-        $this->color = $color;
 
         return $this;
     }
